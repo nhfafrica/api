@@ -14,3 +14,17 @@ exports.createVolunteer = (req, res) => {
     })
   })
 }
+
+exports.listVolunteerApplicants = (req, res) => {
+  userModel.find()
+  .then((applicants) => {
+    res.status(200).json({
+      applicants
+    })
+  })
+  .catch((err) => {
+    res.status(404).json({
+      error: `E don happen => ${err}`
+    })
+  })
+}
