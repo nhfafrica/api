@@ -1,0 +1,29 @@
+{
+    "id": "",
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "phoneNumber": "",
+    "additionalData": {
+        "physicalAddress": "",
+        "pronoun": "",
+        "birthDay": "",
+        "occupation": ""
+    },
+    "socialBackground": {
+        "socialMediaHandles": {
+            "twitterHandle": "",
+            "instagramHandle": "",
+            "facebookHandle": "",
+            "linkedinHandle": ""
+        },
+        "publicFigures": "",
+        "mostAdmiredNGO": ""
+    },
+    "interests": {
+        "preferedSocialMedia": "",
+        "volunteerType": "",
+        "interestedVolunteerUnits": []
+    },
+    "reasonForVolunteering": ""
+}
