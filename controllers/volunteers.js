@@ -9,10 +9,17 @@ exports.createVolunteer = (req, res) => {
       })
     })
     .catch((err) => {
-    res.status(400).json({
-      error: `Registration Failed - ${err}`
+      if (String(err).includes('duplicate key error')) {
+        return res.status(409).json({
+          message: 'Email already exist',
+          error: err
+        })
+      }
+      res.status(400).json({
+        message: 'Registration Failed',
+        error: err
+      })
     })
-  })
 }
 
 exports.listVolunteerApplicants = (req, res) => {
@@ -24,7 +31,8 @@ exports.listVolunteerApplicants = (req, res) => {
   })
   .catch((err) => {
     res.status(404).json({
-      error: `E don happen => ${err}`
+      message: 'Not found',
+      error: err
     })
   })
 }
