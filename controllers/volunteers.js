@@ -4,7 +4,7 @@ const {sendEmail} = require('./emails/email-sender')
 exports.createVolunteer = (req, res) => {
   const user = new userModel(req.body)
   const userEmail = req.body.email
-  const userName = req.body.firstName + req.body.lastName
+  const userName = `${req.body.firstName} ${req.body.lastName}`
   user.save()
     .then(() => {
       res.status(201).json({
