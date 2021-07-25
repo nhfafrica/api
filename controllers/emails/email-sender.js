@@ -11,7 +11,7 @@ exports.sendEmail = (applicantEmail, applicantName) => {
             {
                 "From": {
                 "Email": "hello@nhfafrica.org",
-                "Name": "Nyuma"
+                "Name": "The Nyuma Harrison Foundation"
                 },
                 "To": [
                 {
@@ -19,7 +19,7 @@ exports.sendEmail = (applicantEmail, applicantName) => {
                     "Name": applicantName
                 }
                 ],
-                "Subject": "Greetings from Nyuma Harrison Foundation",
+                "Subject": "Greetings from The Nyuma Harrison Foundation",
                 "TextPart": textTemplate(applicantName),
                 "HTMLPart": htmlTemplate(applicantName)
             }]
